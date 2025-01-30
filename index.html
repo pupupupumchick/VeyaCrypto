@@ -14,21 +14,26 @@
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            background-color: #f4f8fb;
+            background-color: #1a1a1a; /* Темный фон */
+            color: #f1f1f1; /* Светлый текст */
+            padding: 5%; /* Добавлен отступ 5% */
+            box-sizing: border-box;
         }
 
         .container {
-            background: #fff;
+            background: #333; /* Темный фон для контейнера */
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
             width: 100%;
-            max-width: 800px;
+            max-width: 100%; /* Ограничим максимальную ширину */
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            overflow: hidden;
+            box-sizing: border-box; /* Учитываем отступы */
         }
 
         h1 {
@@ -44,9 +49,11 @@
             align-items: center;
             padding: 20px;
             margin-bottom: 20px;
-            background-color: #fff;
+            background-color: #444; /* Темный фон для секций */
             border-radius: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            overflow: auto; /* Добавлено для управления переполнением */
+            box-sizing: border-box;
         }
 
         .profile-header {
@@ -74,7 +81,9 @@
         .profile-info p {
             font-size: 16px;
             margin: 5px 0;
-            color: #333;
+            color: #f1f1f1; /* Светлый текст */
+            word-wrap: break-word; /* Прерывание длинных слов */
+            overflow-wrap: break-word; /* Обработка переполнения */
         }
 
         .balance-container {
@@ -104,8 +113,8 @@
             justify-content: space-between;
             width: 100%;
             padding: 10px;
-            background-color: #fff;
-            border-top: 1px solid #ddd;
+            background-color: #444;
+            border-top: 1px solid #555;
         }
 
         .button-container .button {
@@ -124,7 +133,6 @@
             background-color: #0056b3;
         }
 
-        /* Секционные стили */
         .section h2 {
             font-size: 18px;
             color: #007bff;
@@ -134,7 +142,6 @@
             font-size: 14px;
         }
 
-        /* Стили для Home */
         .home-container {
             text-align: center;
             margin-top: 20px;
@@ -146,10 +153,29 @@
 
         .home-info p {
             font-size: 16px;
-            color: #333;
+            color: #f1f1f1; /* Светлый текст */
         }
 
-        /* Обновленный дизайн кнопок для других вкладок */
+        .activities-section {
+            text-align: left;
+            font-size: 14px;
+            width: 100%; /* Установка ширины 100% */
+            max-width: 100%; /* Ограничение на максимальную ширину */
+            overflow-wrap: break-word; /* Прерывание длинных слов */
+            word-wrap: break-word; /* Прерывание длинных слов */
+            padding: 10px; /* Уменьшен отступ для содержимого */
+            box-sizing: border-box;
+        }
+
+        .activities-section ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .activities-section li {
+            margin-bottom: 8px;
+        }
+
         .section button {
             margin-top: 10px;
             padding: 8px 12px;
@@ -231,7 +257,9 @@
         <div class="activities-section" id="activitiesSection">
             <img src="https://via.placeholder.com/800x400?text=Activities" alt="Activities" />
             <h2>Квесты</h2>
-            <p>Квест: Подпишитесь на наш официальный телеграмм-канал Veya</p>
+            <ul>
+                <li>Квест: Подпишитесь на наш официальный телеграмм-канал Veya</li>
+            </ul>
             <button class="button" onclick="subscribeTelegram()">Подписаться</button>
             <button class="button" onclick="checkSubscription()">Проверить подписку</button>
         </div>
